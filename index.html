@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator</title>
+</head>
+<body>
+    <h1>Mark Valuation</h1>
+   
+    <p id="demo"></p>
+    
+
+
+    <label for="markInput" style="color: blue;">Please Enter Your Mark:</label>
+    <input type="number" id="markInput" style="color: rgb(219, 26, 68); border: 2px solid blue; border-radius: 10px;  text-decoration: none; padding: 10px 10px;" >
+    <button onclick="markValuation()" style="border-radius: 10px; font-size: 20px; color: aqua; padding: 10px 10px;">Click Here </button>
+
+
+
+<script>
+
+    function markValuation(){
+    let mark = parseInt(document.getElementById("markInput").value);
+
+    if (mark >= 0 && mark <= 100) {
+
+        if(mark>=0 && mark<=34){
+            document.getElementById("demo").innerHTML=  "<span style='font-weight:bolder; color:red; font-size:20px;'>" + mark + " mark is fail</span>";
+        }
+        else if (mark >= 35 && mark < 50) {
+            document.getElementById("demo").innerHTML = "<span style='font-weight:bolder; color:orange; font-size:20px;'>" + mark + " mark is pass</span>";
+        } else if (mark >= 50 && mark < 70) {
+            document.getElementById("demo").innerHTML = "<span style='font-weight:bolder; color:blue; font-size:20px;'>" + mark + " mark is good</span>";
+        } else if (mark >= 70 && mark < 90) {
+            document.getElementById("demo").innerHTML =  "<span style='font-weight:bolder; color:yellow; font-size:20px;'>" + mark + " mark is excellent";
+        } else if (mark >= 90 && mark <= 100) {
+            document.getElementById("demo").innerHTML =  "<span style='font-weight:bolder; color:green; font-size:20px;'>" + mark + " mark is outstanding";
+        }
+    } else {
+        document.getElementById("demo").innerHTML = "<span style='font-weight:bolder; color:red; font-size:25px;'>" + "Please Enter the Valid Number";
+    }
+}  
+</script>
+
+</body>
+</html>
